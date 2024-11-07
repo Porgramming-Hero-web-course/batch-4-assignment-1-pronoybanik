@@ -1,12 +1,13 @@
 {
-    const countWordOccurrences = (sentence: string, word: string): number => {
-        const value = new RegExp(`${word}`, 'gi');
-        const matches = sentence.match(value);
-        return matches ? matches.length : 0;
+    function countWordOccurrences(sentence: string, word: string): number {
+        const sentenceWords = sentence.toLowerCase().split(" ");
+        const targetWord = word.toLowerCase();
+    
+        return sentenceWords.filter(w => w === targetWord).length;
     }
-
-
-    console.log(countWordOccurrences("TypeScript is great. I love TypeScript!", "typescript"));
-
+    
+    
+    console.log(countWordOccurrences("I love typescript", "typescript")); 
+    
 
 }
