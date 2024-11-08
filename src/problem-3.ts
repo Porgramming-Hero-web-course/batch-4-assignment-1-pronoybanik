@@ -6,8 +6,8 @@
         return sentenceWords.filter(w => w === targetWord).length;
     }
     
-    
-    console.log(countWordOccurrences("I love typescript", "typescript")); 
+    const result = countWordOccurrences("I love typescript", "typescript")
+    console.log(result); 
     
 
 }
